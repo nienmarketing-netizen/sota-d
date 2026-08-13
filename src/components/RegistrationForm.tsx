@@ -115,7 +115,7 @@ export const RegistrationForm: React.FC = () => {
    {/* Background glow */}
    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[600px] h-[280px] sm:h-[600px] bg-[#00ADEF] opacity-10 rounded-full blur-[100px] sm:blur-[160px] pointer-events-none" />
 
-   <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+   <div className="w-[90%] md:w-[80%] max-w-4xl mx-auto relative z-10">
     
     {/* Form Container Card */}
     <div className="glass-card rounded-3xl p-6 sm:p-10 border border-sky-300 relative overflow-hidden">
@@ -154,7 +154,7 @@ export const RegistrationForm: React.FC = () => {
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
           placeholder="VD: BS. Nguyễn Văn A"
-          className="w-full pl-10 pr-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-body text-sm placeholder-[#64748B] focus:outline-none focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] transition-all"
+          className="w-full pl-10 pr-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-body text-base md:text-sm placeholder-[#64748B] focus:outline-none focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] transition-all"
          />
         </div>
        </div>
@@ -174,7 +174,7 @@ export const RegistrationForm: React.FC = () => {
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
           placeholder="VD: 0901234567"
-          className="w-full pl-10 pr-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-body text-sm placeholder-[#64748B] focus:outline-none focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] transition-all"
+          className="w-full pl-10 pr-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-body text-base md:text-sm placeholder-[#64748B] focus:outline-none focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] transition-all"
          />
         </div>
        </div>
@@ -194,7 +194,7 @@ export const RegistrationForm: React.FC = () => {
           value={workplace}
           onChange={(e) => setWorkplace(e.target.value)}
           placeholder="VD: Nha khoa Sota Dental - Q.1, TP.HCM"
-          className="w-full pl-10 pr-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-body text-sm placeholder-[#64748B] focus:outline-none focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] transition-all"
+          className="w-full pl-10 pr-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 font-body text-base md:text-sm placeholder-[#64748B] focus:outline-none focus:border-[#00ADEF] focus:ring-1 focus:ring-[#00ADEF] transition-all"
          />
         </div>
        </div>

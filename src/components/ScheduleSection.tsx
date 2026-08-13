@@ -4,7 +4,7 @@ import { Clock, User, Sparkles, Layers, CheckCircle2, BookmarkPlus } from 'lucid
 export const ScheduleSection: React.FC = () => {
  return (
   <section id="lich-trinh" className="py-12 md:py-24 relative border-b border-slate-200 max-w-full w-full bg-slate-100 bg-grid-pattern">
-   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-full">
+   <div className="w-[90%] md:w-[80%] max-w-7xl mx-auto relative z-10">
     
     {/* Section Header */}
     <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">

@@ -7,7 +7,7 @@ export const BenefitsSection: React.FC = () => {
    {/* Background glow accent */}
    <div className="absolute top-1/2 right-0 w-[240px] sm:w-[400px] h-[240px] sm:h-[400px] bg-[#00ADEF] opacity-10 rounded-full blur-[100px] sm:blur-[130px] pointer-events-none" />
 
-   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full max-w-full">
+   <div className="w-[90%] md:w-[80%] max-w-7xl mx-auto relative z-10">
     {/* Section Title */}
     <div className="text-center max-w-5xl mx-auto mb-10 sm:mb-16">
      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 mb-3 sm:mb-4">

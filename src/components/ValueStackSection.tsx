@@ -90,7 +90,7 @@ export const ValueStackSection: React.FC = () => {
 
  return (
   <section id="dac-quyen" className="py-16 md:py-24 relative border-b border-slate-200 bg-slate-200 bg-grid-pattern">
-   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+   <div className="w-[90%] md:w-[80%] max-w-7xl mx-auto relative z-10">
     
     {/* Section Header */}
     <div className="text-center max-w-3xl mx-auto mb-16">
