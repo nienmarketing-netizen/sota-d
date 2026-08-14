@@ -98,39 +98,39 @@ export const BenefitsSection: React.FC = () => {
     </div>
 
     {/* SHOFU Material Product Showcase Strip */}
-    <div className="mt-8 sm:mt-12 glass-card rounded-2xl p-4 sm:p-6 border border-slate-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 text-center">
-     <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-full">
-      <div className="w-full aspect-square bg-slate-50 rounded-lg mb-3 overflow-hidden border border-slate-100">
-       <img src="https://placehold.co/400x400/f8fafc/94a3b8?text=Injectable+X" alt="Beautifil Injectable X" className="w-full h-full object-cover" />
+    <div className="mt-8 sm:mt-12 glass-card rounded-2xl p-4 sm:p-6 border border-slate-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 text-center items-start">
+     <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-fit">
+      <div className="w-full bg-slate-100 rounded-lg mb-1.5 overflow-hidden border border-slate-200">
+       <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/main/beautifil-injectable-x.png" alt="Beautifil Injectable X" className="w-full h-auto object-contain" />
       </div>
-      <div className="font-mono text-[10px] text-[#00ADEF] uppercase mt-auto">Composite lỏng cao cấp</div>
+      <div className="font-mono text-[10px] text-[#00ADEF] uppercase mt-1">Composite lỏng cao cấp</div>
       <div className="font-heading font-bold text-sm sm:text-base text-slate-900 mt-1">Beautifil Injectable X</div>
       <div className="font-mono text-[11px] sm:text-xs text-slate-600 mt-1">Độ bóng & Độ bền vượt trội</div>
      </div>
 
-     <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-full">
-      <div className="w-full aspect-square bg-slate-50 rounded-lg mb-3 overflow-hidden border border-slate-100">
-       <img src="https://placehold.co/400x400/f8fafc/94a3b8?text=BeautiBond" alt="BeautiBond Xtreme" className="w-full h-full object-cover" />
+     <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-fit">
+      <div className="w-full bg-slate-100 rounded-lg mb-1.5 overflow-hidden border border-slate-200">
+       <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/main/beautibond-xtreme.png" alt="BeautiBond Xtreme" className="w-full h-auto object-contain" />
       </div>
-      <div className="font-mono text-[10px] text-[#00ADEF] uppercase mt-auto">Keo dán đa năng HEMA-free</div>
+      <div className="font-mono text-[10px] text-[#00ADEF] uppercase mt-1">Keo dán đa năng HEMA-free</div>
       <div className="font-heading font-bold text-sm sm:text-base text-slate-900 mt-1">BeautiBond Xtreme</div>
       <div className="font-mono text-[11px] sm:text-xs text-slate-600 mt-1">Lực dán chắc chắn mọi bề mặt</div>
      </div>
 
-     <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-full">
-      <div className="w-full aspect-square bg-slate-50 rounded-lg mb-3 overflow-hidden border border-slate-100">
-       <img src="https://placehold.co/400x400/f8fafc/94a3b8?text=Beautilink+SA" alt="Beautilink SA" className="w-full h-full object-cover" />
+     <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-fit">
+      <div className="w-full bg-slate-100 rounded-lg mb-1.5 overflow-hidden border border-slate-200">
+       <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/main/BeautilinkSA.png" alt="Beautilink SA" className="w-full h-auto object-contain" />
       </div>
-      <div className="font-mono text-[10px] text-[#C43838] uppercase mt-auto">Xi măng tự dán thế hệ mới</div>
+      <div className="font-mono text-[10px] text-[#C43838] uppercase mt-1">Xi măng tự dán thế hệ mới</div>
       <div className="font-heading font-bold text-sm sm:text-base text-slate-900 mt-1">Beautilink SA</div>
       <div className="font-mono text-[11px] sm:text-xs text-slate-600 mt-1">One-Sweep sạch xi măng dư</div>
      </div>
 
-     <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-full">
-      <div className="w-full aspect-square bg-slate-50 rounded-lg mb-3 overflow-hidden border border-slate-100">
-       <img src="https://placehold.co/400x400/f8fafc/94a3b8?text=S-PRG" alt="S-PRG Technology" className="w-full h-full object-cover" />
+     <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-fit">
+      <div className="w-full bg-slate-100 rounded-lg mb-1.5 overflow-hidden border border-slate-200">
+       <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/main/S-PRG.png" alt="S-PRG Technology" className="w-full h-auto object-contain" />
       </div>
-      <div className="font-mono text-[10px] text-sky-500 uppercase mt-auto">Công nghệ độc quyền</div>
+      <div className="font-mono text-[10px] text-sky-500 uppercase mt-1">Công nghệ độc quyền</div>
       <div className="font-heading font-bold text-sm sm:text-base text-slate-900 mt-1">S-PRG Technology</div>
       <div className="font-mono text-[11px] sm:text-xs text-slate-600 mt-1">Tái khoáng & Ngừa ê buốt</div>
      </div>

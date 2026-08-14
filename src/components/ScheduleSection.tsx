@@ -51,9 +51,9 @@ export const ScheduleSection: React.FC = () => {
 
        {/* Speaker */}
        <div className="grid grid-cols-[80px_1fr] sm:grid-cols-[100px_1fr] gap-3 sm:gap-5 items-center p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 mb-4 sm:mb-6">
-        <div className="w-full aspect-square rounded-xl sm:rounded-2xl shofu-gradient p-0.5 shrink-0">
-         <div className="w-full h-full bg-slate-200 rounded-[10px] sm:rounded-[14px] overflow-hidden">
-          <img src="https://placehold.co/300x300/e2e8f0/475569?text=Avatar" alt="BS. Dương Bảo Ngọc" className="w-full h-full object-cover" />
+        <div className="w-full h-fit rounded-xl sm:rounded-2xl shofu-gradient p-0.5 shrink-0">
+         <div className="w-full h-fit bg-slate-200 rounded-[10px] sm:rounded-[14px] overflow-hidden">
+          <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/main/BS.Ngo%CC%A3c.png" alt="BS. Dương Bảo Ngọc" className="w-full h-auto object-contain block" />
          </div>
         </div>
         <div className="flex flex-col justify-center">
@@ -117,9 +117,9 @@ export const ScheduleSection: React.FC = () => {
 
        {/* Speaker */}
        <div className="grid grid-cols-[80px_1fr] sm:grid-cols-[100px_1fr] gap-3 sm:gap-5 items-center p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 mb-4 sm:mb-6">
-        <div className="w-full aspect-square rounded-xl sm:rounded-2xl sota-gradient p-0.5 shrink-0">
-         <div className="w-full h-full bg-slate-200 rounded-[10px] sm:rounded-[14px] overflow-hidden">
-          <img src="https://placehold.co/300x300/e2e8f0/475569?text=Avatar" alt="ThS.BS Trần Quang Khánh" className="w-full h-full object-cover" />
+        <div className="w-full h-fit rounded-xl sm:rounded-2xl sota-gradient p-0.5 shrink-0">
+         <div className="w-full h-fit bg-slate-200 rounded-[10px] sm:rounded-[14px] overflow-hidden">
+          <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/main/BS%20Kha%CC%81nh.png" alt="ThS.BS Trần Quang Khánh" className="w-full h-auto object-contain block" />
          </div>
         </div>
         <div className="flex flex-col justify-center">
