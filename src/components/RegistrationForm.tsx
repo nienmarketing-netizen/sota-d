@@ -95,9 +95,9 @@ export const RegistrationForm: React.FC = () => {
  };
 
  const getSessionText = () => {
-  if (sessionOption === 'morning') return 'Sáng (10:00 - 11:30): Demo 3D Printed Technique';
+  if (sessionOption === 'morning') return 'Sáng (10:30 - 11:15): Demo 3D Printed Technique';
   if (sessionOption === 'afternoon') return 'Chiều (14:15 - 15:00): Resin Cement & Công nghệ S-PRG';
-  return 'Cả 2 chương trình (Sáng 10:00 & Chiều 14:15)';
+  return 'Cả 2 chương trình (Sáng 10:30 & Chiều 14:15)';
  };
 
  const handleResetForm = () => {
@@ -132,7 +132,7 @@ export const RegistrationForm: React.FC = () => {
        ĐĂNG KÝ THAM DỰ
       </h2>
       <p className="font-body text-slate-600 text-sm sm:text-base mt-2">
-       Quý Bác sĩ vui lòng điền thông tin để Ban Tổ Chức Sota-D / SHOFU xác nhận giữ suất tham dự phiên Báo cáo khoa học, Hands-on, đồng thời chuẩn bị bộ quà tặng và chuẩn bị đón tiếp chu đáo.
+       Quý Bác sĩ vui lòng điền thông tin để Ban Tổ Chức Sota-D xác nhận giữ suất tham dự phiên Báo cáo khoa học, Hands-on, đồng thời chuẩn bị bộ quà tặng và chuẩn bị đón tiếp chu đáo.
       </p>
      </div>
 
@@ -220,7 +220,7 @@ export const RegistrationForm: React.FC = () => {
            className="mt-0.5 accent-[#00ADEF]"
           />
           <div>
-           <strong className="text-slate-900 block font-heading text-sm mb-0.5">Sáng (10:00 – 11:30): Demo 3D Printed Technique</strong>
+           <strong className="text-slate-900 block font-heading text-sm mb-0.5">Sáng (10:30 - 11:15): Demo 3D Printed Technique</strong>
            <span className="text-xs text-slate-600">Báo cáo viên BS. Dương Bảo Ngọc • Tối ưu phục hồi răng sau</span>
           </div>
          </label>
@@ -325,7 +325,7 @@ export const RegistrationForm: React.FC = () => {
         <div className="flex justify-between items-center border-b border-slate-200 pb-3">
          <div>
           <span className="font-mono text-[10px] text-[#00ADEF] uppercase font-bold">VÉ THAM DỰ ĐIỆN TỬ</span>
-          <h3 className="font-heading font-extrabold text-lg text-slate-900 mt-0.5">SOTA-D | SHOFU</h3>
+          <h3 className="font-heading font-extrabold text-lg text-slate-900 mt-0.5">SOTA-D</h3>
           <h4 className="font-heading font-bold text-sm text-slate-600">VIDEC 2026 • BOOTH B75–B77</h4>
          </div>
         </div>
@@ -349,7 +349,7 @@ export const RegistrationForm: React.FC = () => {
          </div>
          <div>
           <span className="text-slate-600 block text-[10px] uppercase">Địa điểm Check-in:</span>
-          <span className="text-slate-900">Booth B75-B77 (SOTA-D/SHOFU) | VIDEC2026 - 135 Nam Kỳ Khởi Nghĩa, P. Bến Thành, TP.HCM</span>
+          <span className="text-slate-900">Booth B75-B77 (SOTA-D) | VIDEC2026 - 135 Nam Kỳ Khởi Nghĩa, P. Bến Thành, TP.HCM</span>
          </div>
          <div className="pt-2 mt-2 border-t border-slate-100">
           <span className="text-slate-600 block text-[10px] uppercase">Liên hệ hỗ trợ:</span>
@@ -404,7 +404,7 @@ export const RegistrationForm: React.FC = () => {
                 <CheckCircle2 className="w-10 h-10" />
               </div>
               <h3 className="font-heading font-bold text-2xl text-slate-900 leading-tight">
-                Cảm ơn Quý Bác sĩ đã đăng ký tham dự cùng Sota-D/ Shofu!
+                Cảm ơn Quý Bác sĩ đã đăng ký tham dự cùng Sota-D!
               </h3>
               <p className="font-body text-slate-600">
                 Hẹn gặp lại Quý Bác sĩ tại VIDEC 2026 gian hàng B75-B77 vào 27/08/2026!

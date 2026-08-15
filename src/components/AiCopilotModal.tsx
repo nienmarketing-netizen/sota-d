@@ -15,7 +15,7 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({ isOpen, onClose 
   {
    id: '1',
    sender: 'assistant',
-   text: "Xin chào Quý Bác sĩ! Tôi là Trợ lý AI Chuyên môn của Sota-D & SHOFU tại VIDEC 2026 (Gian hàng B75–B77). Quý Bác sĩ cần tư vấn về kỹ thuật 3D Printed Technique, công nghệ S-PRG tái khoáng hóa hay lịch trình báo cáo ngày 27/08/2026?",
+   text: "Xin chào Quý Bác sĩ! Tôi là Trợ lý AI Chuyên môn của Sota-D tại VIDEC 2026 (Gian hàng B75–B77). Quý Bác sĩ cần tư vấn về kỹ thuật 3D Printed Technique, công nghệ S-PRG tái khoáng hóa hay lịch trình báo cáo ngày 27/08/2026?",
    timestamp: 'Vừa xong',
   },
  ]);
@@ -58,7 +58,7 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({ isOpen, onClose 
     const aiMsg: AiChatMessage = {
      id: (Date.now() + 1).toString(),
      sender: 'assistant',
-     text: data.reply || "Sota-D & SHOFU hân hạnh đón tiếp Quý Bác sĩ tại Gian hàng B75–B77 (VIDEC 2026).",
+     text: data.reply || "Sota-D hân hạnh đón tiếp Quý Bác sĩ tại Gian hàng B75–B77 (VIDEC 2026).",
      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
     };
     setMessages((prev) => [...prev, aiMsg]);
@@ -67,11 +67,11 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({ isOpen, onClose 
    }
   } catch {
    setTimeout(() => {
-    let responseText = "Sota-D & SHOFU kính mời Quý Bác sĩ đến tham dự Hands-on trực tiếp tại Gian hàng B75–B77 vào ngày 27/08/2026 tại 135 Nam Kỳ Khởi Nghĩa, Bến Thành, TP.HCM.";
+    let responseText = "Sota-D kính mời Quý Bác sĩ đến tham dự Hands-on trực tiếp tại Gian hàng B75–B77 vào ngày 27/08/2026 tại 135 Nam Kỳ Khởi Nghĩa, Bến Thành, TP.HCM.";
 
     const q = query.toLowerCase();
     if (q.includes('3d') || q.includes('printed') || q.includes('ngọc') || q.includes('sáng')) {
-     responseText = "Phiên Sáng (10:00 - 11:30): Báo cáo viên BS. Dương Bảo Ngọc chia sẻ giải pháp phục hồi trực tiếp răng sau nhanh chóng với 3D Printed Technique. Kỹ thuật kết hợp máng hướng dẫn trong suốt và dòng Composite lỏng chịu lực Beautifil Injectable X/XSL + BeautiBond Xtreme.";
+     responseText = "Phiên Sáng (10:30 - 11:15): Báo cáo viên BS. Dương Bảo Ngọc chia sẻ giải pháp phục hồi trực tiếp răng sau nhanh chóng với 3D Printed Technique. Kỹ thuật kết hợp máng hướng dẫn trong suốt và dòng Composite lỏng chịu lực Beautifil Injectable X/XSL + BeautiBond Xtreme.";
     } else if (q.includes('s-prg') || q.includes('ê buốt') || q.includes('xi măng') || q.includes('khánh') || q.includes('chiều')) {
      responseText = "Phiên Chiều (14:15 - 15:00): ThS.BS Trần Quang Khánh trình bày về Xi măng đa năng thế hệ mới & Công nghệ S-PRG. Hạt độn S-PRG giải phóng 6 loại ion khoáng tự nhiên, chủ động tái khoáng hóa men răng và triệt tiêu ê buốt sau dán Zirconia/sứ với Beautilink SA.";
     } else if (q.includes('vật tư') || q.includes('sản phẩm') || q.includes('shofu') || q.includes('beautifil')) {
@@ -106,7 +106,7 @@ export const AiCopilotModal: React.FC<AiCopilotModalProps> = ({ isOpen, onClose 
       </div>
       <div>
        <div className="flex items-center gap-2">
-        <h3 className="font-heading font-bold text-lg text-slate-900">Trợ Lý AI Sota-D / SHOFU</h3>
+        <h3 className="font-heading font-bold text-lg text-slate-900">Trợ Lý AI Sota-D</h3>
         <Badge variant="gold">VIDEC 2026</Badge>
        </div>
        <p className="font-mono text-[11px] text-slate-600">Tư vấn Vật liệu Nha khoa & Kỹ thuật Lâm sàng</p>

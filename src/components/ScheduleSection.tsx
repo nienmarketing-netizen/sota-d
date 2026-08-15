@@ -32,7 +32,7 @@ export const ScheduleSection: React.FC = () => {
        <div className="flex items-center justify-between gap-1 sm:gap-2 mb-4 sm:mb-6 pb-3 sm:pb-4 border-b border-slate-200">
         <div className="flex items-center gap-1.5 sm:gap-3">
          <div className="px-1.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-sky-100 border border-sky-300 font-mono text-[10px] sm:text-sm font-bold text-[#00ADEF] whitespace-nowrap">
-          10:00 – 11:30
+          10:30 - 11:15
          </div>
          <span className="font-mono text-[10px] sm:text-xs font-semibold text-[#00ADEF] uppercase tracking-wider whitespace-nowrap">PHIÊN SÁNG</span>
         </div>
@@ -86,7 +86,7 @@ export const ScheduleSection: React.FC = () => {
       <div className="pt-3.5 sm:pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs font-mono text-slate-600">
        <span>Địa điểm: Booth B75–B77</span>
        <span className="text-[#00ADEF] flex items-center gap-1 font-semibold">
-        <CheckCircle2 className="w-3.5 h-3.5" /> Chuẩn bị sẵn Mẫu hàm Demo
+        <CheckCircle2 className="w-3.5 h-3.5" /> Demo thực hành
        </span>
       </div>
      </div>

@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
      <div className="md:col-span-6 space-y-4">
       <div className="pb-1">
        <h3 className="font-heading font-bold text-lg sm:text-xl text-slate-900 uppercase tracking-tight leading-tight">
-        SOTA-D & SHOFU | VIDEC 2026
+        SOTA-D | VIDEC 2026
        </h3>
       </div>
 
@@ -49,7 +49,7 @@ export const Footer: React.FC = () => {
      <div className="flex flex-col sm:flex-row items-center sm:gap-2 text-[#00ADEF] font-semibold mx-auto sm:mx-0">
       <span>VIDEC 2026</span>
       <span className="hidden sm:inline">|</span>
-      <span>Gian hàng Sota-D / SHOFU (B75–B77)</span>
+      <span>Gian hàng Sota-D (B75–B77)</span>
      </div>
     </div>
    </div>

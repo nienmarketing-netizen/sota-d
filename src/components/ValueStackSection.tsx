@@ -132,7 +132,7 @@ export const ValueStackSection: React.FC = () => {
       <div className="glass-card rounded-2xl p-4 sm:p-6 border border-sky-300 relative overflow-hidden">
        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-200">
         <span className="font-mono text-xs font-bold text-[#00ADEF] uppercase tracking-wider flex items-center gap-2">
-         <Sparkles className="w-4 h-4 shrink-0" /> PHIÊN SÁNG (10:00 – 11:30)
+         <Sparkles className="w-4 h-4 shrink-0" /> PHIÊN SÁNG (10:30 - 11:15)
         </span>
         <span className="self-start sm:self-auto px-2.5 py-1 rounded-full bg-sky-100 text-[#00ADEF] text-[11px] font-mono font-bold">
          CHECK-IN SAMPLE

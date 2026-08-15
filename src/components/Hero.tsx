@@ -44,7 +44,7 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="inline-flex max-w-full items-center gap-2 px-2.5 sm:px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 ">
        <span className="w-2.5 h-2.5 rounded-full bg-[#00ADEF] animate-pulse shadow-md shrink-0" />
        <span className="font-mono text-[10px] sm:text-xs font-semibold text-[#00ADEF] uppercase tracking-normal sm:tracking-wider leading-tight">
-        VIDEC 2026 | Gian hàng Sota-D / SHOFU (B75–B77)
+        VIDEC 2026 | Gian hàng Sota-D (B75–B77)
        </span>
       </div>
 
@@ -139,7 +139,7 @@ export const Hero: React.FC<HeroProps> = ({
           <div className="min-w-0">
            <div className="text-[#00ADEF] font-mono font-bold text-[11px] sm:text-xs uppercase tracking-wider flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-[#00ADEF] animate-pulse shrink-0" />
-            Phiên Sáng (10:00 - 11:30)
+            Phiên Sáng (10:30 - 11:15)
            </div>
            <div className="text-slate-900 font-semibold text-xs sm:text-sm mt-0.5 truncate">
             3D Printed Technique
@@ -190,7 +190,7 @@ export const Hero: React.FC<HeroProps> = ({
 
        <div className="glass-card rounded-2xl p-4 sm:p-5 border-l-2 border-l-[#00ADEF]">
         <div className="font-mono text-[10px] uppercase text-slate-600 mb-1">Đơn vị tổ chức</div>
-        <div className="font-heading font-bold text-lg sm:text-xl text-[#00ADEF]">SOTA-D / SHOFU</div>
+        <div className="font-heading font-bold text-lg sm:text-xl text-[#00ADEF]">SOTA-D</div>
        </div>
       </div>
      </div>
