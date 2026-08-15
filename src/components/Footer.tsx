@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
        </div>
        <div className="flex items-center gap-2.5">
         <Phone className="w-4 h-4 text-[#00ADEF] shrink-0" />
-        <span><strong className="text-slate-900">Hotline hỗ trợ:</strong> <a href="tel:0901769510" className="text-[#00ADEF] hover:underline font-bold">0901769510 (Mr. Huy)</a></span>
+        <span><strong className="text-slate-900">Hotline hỗ trợ:</strong> <a href="tel:0967287139" className="text-[#00ADEF] hover:underline font-bold">0967 287 139</a></span>
        </div>
       </div>
      </div>

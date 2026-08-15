@@ -353,7 +353,7 @@ export const RegistrationForm: React.FC = () => {
          </div>
          <div className="pt-2 mt-2 border-t border-slate-100">
           <span className="text-slate-600 block text-[10px] uppercase">Liên hệ hỗ trợ:</span>
-          <span className="text-slate-900 font-bold">0901 769 510 (Mr. Huy)</span>
+          <span className="text-slate-900 font-bold">0967 287 139</span>
          </div>
         </div>
 
