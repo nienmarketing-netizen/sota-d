@@ -115,7 +115,7 @@ export const RegistrationForm: React.FC = () => {
    {/* Background glow */}
    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] sm:w-[600px] h-[280px] sm:h-[600px] bg-[#00ADEF] opacity-10 rounded-full blur-[100px] sm:blur-[160px] pointer-events-none" />
 
-   <div className="w-[90%] md:w-[80%] max-w-4xl mx-auto relative z-10">
+   <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
     
     {/* Form Container Card */}
     <div className="glass-card rounded-3xl p-6 sm:p-10 border border-sky-300 relative overflow-hidden">

@@ -17,13 +17,13 @@ export const Hero: React.FC<HeroProps> = ({
    <div className="absolute top-1/4 right-0 w-[240px] sm:w-[500px] h-[240px] sm:h-[500px] bg-[#00ADEF] opacity-15 rounded-full blur-[100px] sm:blur-[150px] pointer-events-none" />
    <div className="absolute bottom-0 left-0 w-[220px] sm:w-[450px] h-[220px] sm:h-[450px] bg-[#C43838] opacity-15 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
 
-   <div className="w-[90%] md:w-[80%] max-w-7xl mx-auto relative z-10">
+   <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
     {/* Partner Logos */}
     <div className="inline-flex flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-5 mb-8 sm:mb-12 bg-white p-2.5 sm:p-3 px-4 sm:px-6 rounded-full shadow-sm border border-slate-200">
       {/* Organised By */}
       <div className="flex items-center gap-2 sm:gap-3">
         <span className="font-mono text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap">Organised by</span>
-        <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/03c66c4af6e28e2a69254e4d674c5a45ab53e988/Sota-D%20logo%20(1).png" alt="Sota-D Logo" className="h-5 sm:h-7 object-contain" />
+        <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Sota-D%20logo%20(1).png" alt="Sota-D Logo" className="h-5 sm:h-7 object-contain" />
       </div>
 
       {/* Divider */}
@@ -32,7 +32,7 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Supported By */}
       <div className="flex items-center gap-2 sm:gap-3">
         <span className="font-mono text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider whitespace-nowrap">Supported by</span>
-        <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/03c66c4af6e28e2a69254e4d674c5a45ab53e988/Logo_Shofu%20(1).png" alt="Shofu Logo" className="h-5 sm:h-7 object-contain" />
+        <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Logo_Shofu%20(1).png" alt="Shofu Logo" className="h-5 sm:h-7 object-contain" />
       </div>
     </div>
 

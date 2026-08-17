@@ -14,7 +14,7 @@ export const Navbar: React.FC<NavbarProps> = ({
  return (
   <header className="sticky top-0 z-50 w-full bg-slate-50/90 backdrop-blur-xl border-b border-slate-200">
    {/* Main Header Bar */}
-   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+   <div className="w-[90%] lg:w-[80%] mx-auto h-20 flex items-center justify-between gap-4">
     {/* Brand Logo & Event Badge */}
     <div 
      onClick={() => onScrollToSection('hero')}

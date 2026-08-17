@@ -7,7 +7,7 @@ export const BenefitsSection: React.FC = () => {
    {/* Background glow accent */}
    <div className="absolute top-1/2 right-0 w-[240px] sm:w-[400px] h-[240px] sm:h-[400px] bg-[#00ADEF] opacity-10 rounded-full blur-[100px] sm:blur-[130px] pointer-events-none" />
 
-   <div className="w-[90%] md:w-[80%] max-w-7xl mx-auto relative z-10">
+   <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
     {/* Section Title */}
     <div className="text-center max-w-5xl mx-auto mb-10 sm:mb-16">
      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 mb-3 sm:mb-4">
@@ -101,7 +101,7 @@ export const BenefitsSection: React.FC = () => {
     <div className="mt-8 sm:mt-12 glass-card rounded-2xl p-4 sm:p-6 border border-slate-200 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 text-center items-start">
      <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-fit">
       <div className="w-full bg-slate-100 rounded-lg mb-1.5 overflow-hidden border border-slate-200">
-       <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautifil-injectable-x.png" alt="Beautifil Injectable X" className="w-full h-auto object-contain" />
+       <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautifil-injectable-x.png" alt="Beautifil Injectable X" className="w-full h-auto object-contain" />
       </div>
       <div className="font-mono text-[10px] text-[#00ADEF] uppercase mt-1">Composite lỏng cao cấp</div>
       <div className="font-heading font-bold text-sm sm:text-base text-slate-900 mt-1">Beautifil Injectable X</div>
@@ -110,7 +110,7 @@ export const BenefitsSection: React.FC = () => {
 
      <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-fit">
       <div className="w-full bg-slate-100 rounded-lg mb-1.5 overflow-hidden border border-slate-200">
-       <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png" alt="BeautiBond Xtreme" className="w-full h-auto object-contain" />
+       <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/beautibond-xtreme.png" alt="BeautiBond Xtreme" className="w-full h-auto object-contain" />
       </div>
       <div className="font-mono text-[10px] text-[#00ADEF] uppercase mt-1">Keo dán đa năng HEMA-free</div>
       <div className="font-heading font-bold text-sm sm:text-base text-slate-900 mt-1">BeautiBond Xtreme</div>
@@ -119,7 +119,7 @@ export const BenefitsSection: React.FC = () => {
 
      <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-fit">
       <div className="w-full bg-slate-100 rounded-lg mb-1.5 overflow-hidden border border-slate-200">
-       <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png" alt="Beautilink SA" className="w-full h-auto object-contain" />
+       <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BeautilinkSA.png" alt="Beautilink SA" className="w-full h-auto object-contain" />
       </div>
       <div className="font-mono text-[10px] text-[#C43838] uppercase mt-1">Xi măng tự dán thế hệ mới</div>
       <div className="font-heading font-bold text-sm sm:text-base text-slate-900 mt-1">Beautilink SA</div>
@@ -128,7 +128,7 @@ export const BenefitsSection: React.FC = () => {
 
      <div className="p-3 rounded-xl bg-white shadow-sm hover:bg-slate-100 transition-colors flex flex-col h-fit">
       <div className="w-full bg-slate-100 rounded-lg mb-1.5 overflow-hidden border border-slate-200">
-       <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/03c66c4af6e28e2a69254e4d674c5a45ab53e988/S-PRG.png" alt="S-PRG Technology" className="w-full h-auto object-contain" />
+       <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/S-PRG.png" alt="S-PRG Technology" className="w-full h-auto object-contain" />
       </div>
       <div className="font-mono text-[10px] text-sky-500 uppercase mt-1">Công nghệ độc quyền</div>
       <div className="font-heading font-bold text-sm sm:text-base text-slate-900 mt-1">S-PRG Technology</div>

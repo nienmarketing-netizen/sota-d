@@ -46,6 +46,42 @@ async function startServer() {
     }
   });
 
+  // Lead Submission Endpoint proxy
+  app.post("/api/submit-lead", async (req, res) => {
+    try {
+      // Use the new URL provided by the user, ignoring the old environment variable if it hasn't been updated
+      const webhookUrl = "https://script.google.com/macros/s/AKfycbxc-EtHL1Un2AgalFAz8RvxlHX0TtE4q6OK2h0CiSNWBo7tvP1sDhBiJv7vvrRkJ3-zgQ/exec";
+      if (!webhookUrl) {
+         console.error("Webhook URL missing");
+         return res.status(500).json({ error: "Configuration missing" });
+      }
+
+      const payload = req.body;
+      
+      const bodyString = Object.entries(payload)
+        .map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value as string))
+        .join('&');
+
+      console.log("Sending data to Google Sheets:", bodyString);
+
+      // Server-side fetch bypassing browser CORS
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        body: bodyString,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+        },
+      });
+
+      console.log("Google Apps Script HTTP Status:", response.status);
+
+      res.json({ success: true });
+    } catch (err: any) {
+      console.error("Google Sheets Submission Error:", err);
+      res.status(500).json({ error: "Failed to submit lead" });
+    }
+  });
+
   // Vite middleware for development or static serving for production
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({

@@ -1,54 +1,15 @@
-import React, { useState } from 'react';
-import { Hero } from './components/Hero';
-import { BenefitsSection } from './components/BenefitsSection';
-import { ScheduleSection } from './components/ScheduleSection';
-import { ValueStackSection } from './components/ValueStackSection';
-import { RegistrationForm } from './components/RegistrationForm';
-import { AiCopilotModal } from './components/AiCopilotModal';
-import { Footer } from './components/Footer';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import VidecLanding from './pages/VidecLanding';
+import ShofuLanding from './pages/ShofuLanding';
 
 export default function App() {
- const [isAiCopilotOpen, setIsAiCopilotOpen] = useState(false);
-
- const scrollToSection = (sectionId: string) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-   element.scrollIntoView({ behavior: 'smooth' });
-  }
- };
-
- return (
-  <div className="min-h-screen bg-slate-50 bg-grid-pattern text-slate-900 flex flex-col font-body selection:bg-sky-200 selection:text-sky-900">
-   {/* Landing Page Content Sections */}
-   <main className="flex-1">
-    {/* KHỐI 1: HERO SECTION */}
-    <Hero
-     onScrollToForm={() => scrollToSection('dang-ky')}
-     onScrollToSchedule={() => scrollToSection('lich-trinh')}
-    />
-
-    {/* KHỐI 2: LỢI ÍCH - Nỗi đau & Giải pháp */}
-    <BenefitsSection />
-
-    {/* KHỐI 3: LỊCH TRÌNH & BÁO CÁO VIÊN */}
-    <ScheduleSection />
-
-    {/* KHỐI 4: VALUE STACK - Đặc quyền tham dự */}
-    <ValueStackSection />
-
-    {/* KHỐI 5: FORM ĐĂNG KÝ */}
-    <RegistrationForm />
-   </main>
-
-   {/* AI Assistant Modal */}
-   <AiCopilotModal
-    isOpen={isAiCopilotOpen}
-    onClose={() => setIsAiCopilotOpen(false)}
-   />
-
-   {/* KHỐI 6: FOOTER */}
-   <Footer />
-  </div>
- );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<ShofuLanding />} />
+        <Route path="/videc2026" element={<VidecLanding />} />
+      </Routes>
+    </Router>
+  );
 }
-

@@ -4,7 +4,7 @@ import { MapPin, Phone, CheckCircle2, AlertCircle, Building2 } from 'lucide-reac
 export const Footer: React.FC = () => {
  return (
   <footer className="bg-slate-50 border-t border-slate-200 text-slate-900 pt-10 sm:pt-14 pb-8 sm:pb-10 font-body text-sm relative max-w-full w-full">
-   <div className="w-[90%] md:w-[80%] max-w-7xl mx-auto space-y-8 sm:space-y-10">
+   <div className="w-[90%] lg:w-[80%] mx-auto space-y-8 sm:space-y-10">
     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-start">
      
      {/* Company Main Info */}

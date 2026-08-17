@@ -4,7 +4,7 @@ import { Clock, User, Sparkles, Layers, CheckCircle2, BookmarkPlus } from 'lucid
 export const ScheduleSection: React.FC = () => {
  return (
   <section id="lich-trinh" className="py-12 md:py-24 relative border-b border-slate-200 max-w-full w-full bg-slate-100 bg-grid-pattern">
-   <div className="w-[90%] md:w-[80%] max-w-7xl mx-auto relative z-10">
+   <div className="w-[90%] lg:w-[80%] mx-auto relative z-10">
     
     {/* Section Header */}
     <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
@@ -53,7 +53,7 @@ export const ScheduleSection: React.FC = () => {
        <div className="grid grid-cols-[80px_1fr] sm:grid-cols-[100px_1fr] gap-3 sm:gap-5 items-center p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 mb-4 sm:mb-6">
         <div className="w-full h-fit rounded-xl sm:rounded-2xl shofu-gradient p-0.5 shrink-0">
          <div className="w-full h-fit bg-slate-200 rounded-[10px] sm:rounded-[14px] overflow-hidden">
-          <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/03c66c4af6e28e2a69254e4d674c5a45ab53e988/BS.Ngo%CC%A3c.png" alt="BS. Dương Bảo Ngọc" className="w-full h-auto object-contain block" />
+          <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BS.Ngo%CC%A3c.png" alt="BS. Dương Bảo Ngọc" className="w-full h-auto object-contain block" />
          </div>
         </div>
         <div className="flex flex-col justify-center">
@@ -119,7 +119,7 @@ export const ScheduleSection: React.FC = () => {
        <div className="grid grid-cols-[80px_1fr] sm:grid-cols-[100px_1fr] gap-3 sm:gap-5 items-center p-3 sm:p-5 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 mb-4 sm:mb-6">
         <div className="w-full h-fit rounded-xl sm:rounded-2xl sota-gradient p-0.5 shrink-0">
          <div className="w-full h-fit bg-slate-200 rounded-[10px] sm:rounded-[14px] overflow-hidden">
-          <img src="https://raw.githubusercontent.com/nienmarketing-netizen/sota-d/03c66c4af6e28e2a69254e4d674c5a45ab53e988/BS%20Kha%CC%81nh.png" alt="ThS.BS Trần Quang Khánh" className="w-full h-auto object-contain block" />
+          <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BS%20Kha%CC%81nh.png" alt="ThS.BS Trần Quang Khánh" className="w-full h-auto object-contain block" />
          </div>
         </div>
         <div className="flex flex-col justify-center">

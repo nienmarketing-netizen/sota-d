@@ -1,19 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/videc2026",
+      "source": "/(.*)",
       "destination": "/index.html"
-    },
-    {
-      "source": "/videc2026/(.*)",
-      "destination": "/$1"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/videc2026",
-      "permanent": false
     }
   ]
 }
