@@ -49,40 +49,27 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
     setIsSubmitting(true);
     
     try {
-      // Use env variable or fallback to the provided URL
-      const webhookUrl = import.meta.env.VITE_GOOGLE_SHEET_WEBHOOK_URL || 'https://script.google.com/macros/s/AKfycbzniwnJ-thns2ZGAnVD2NTNyfa_kvfFZXHBAv8xU9XBylcXPi0Hc_AcmR5-stOD6DAHwg/exec';
-      
-      if (true) { // Always use backend proxy
-        const payload = {
-          'Nguồn Lead': 'Landing Page Shofu',
-          'URL/Creative': window.location.href,
-          'Loại Yêu Cầu': type === 'consult' ? 'Tư vấn' : 'Báo giá',
-          'Tên Bác sĩ': formData.name,
-          'Số điện thoại (Zalo)': formData.phone,
-          'Phòng khám / Nơi công tác': formData.clinic,
-          'Sản phẩm quan tâm': formData.products.join(', '),
-          'Trạng thái Lead': 'Mới',
-          'Ghi chú thêm': ''
-        };
+      const payload = {
+        'Nguồn Lead': 'Landing Page Shofu',
+        'URL/Creative': window.location.href,
+        'Loại Yêu Cầu': type === 'consult' ? 'Tư vấn' : 'Báo giá',
+        'Tên Bác sĩ': formData.name,
+        'Số điện thoại (Zalo)': formData.phone,
+        'Phòng khám / Nơi công tác': formData.clinic,
+        'Sản phẩm quan tâm': formData.products.join(', '),
+        'Trạng thái Lead': 'Mới',
+        'Ghi chú thêm': ''
+      };
 
-        const response = await fetch('/api/submit-lead', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(payload)
-        });
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxc-EtHL1Un2AgalFAz8RvxlHX0TtE4q6OK2h0CiSNWBo7tvP1sDhBiJv7vvrRkJ3-zgQ/exec';
 
-        if (!response.ok) {
-          console.error("Failed to submit lead");
-        }
-
-        await new Promise(resolve => setTimeout(resolve, 1000));
-      } else {
-        // Fallback for demo purposes if no webhook is set
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        console.log('Form submitted (No webhook URL configured):', formData);
-      }
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(payload)
+      });
 
       setIsSubmitting(false);
       setIsSuccess(true);
