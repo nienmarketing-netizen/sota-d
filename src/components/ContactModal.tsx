@@ -63,12 +63,17 @@ export function ContactModal({ isOpen, onClose, type }: ContactModalProps) {
 
       const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxc-EtHL1Un2AgalFAz8RvxlHX0TtE4q6OK2h0CiSNWBo7tvP1sDhBiJv7vvrRkJ3-zgQ/exec';
 
+      const formDataEncoded = new URLSearchParams();
+      Object.entries(payload).forEach(([key, value]) => {
+        formDataEncoded.append(key, value);
+      });
+
       await fetch(SCRIPT_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'text/plain;charset=utf-8',
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
         },
-        body: JSON.stringify(payload)
+        body: formDataEncoded.toString()
       });
 
       setIsSubmitting(false);
