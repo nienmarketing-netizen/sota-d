@@ -28,10 +28,10 @@ export function ShofuHeader({ onNavigate, onOpenQuote }: ShofuHeaderProps) {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isMobileMenuOpen ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-4 sm:py-5'
+        isScrolled || isMobileMenuOpen ? 'bg-white shadow-sm py-3' : 'bg-transparent py-4 sm:py-5'
       }`}
     >
-      <div className="w-[90%] lg:w-[80%] mx-auto">
+      <div className="w-[90%] lg:w-[80%] mx-auto relative z-20">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/Sota-D%20logo%20(1).png" alt="Sota-D" className="h-6 sm:h-8 object-contain" />
@@ -75,8 +75,8 @@ export function ShofuHeader({ onNavigate, onOpenQuote }: ShofuHeaderProps) {
 
       {/* Mobile Navigation Dropdown */}
       <div 
-        className={`md:hidden absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-xl overflow-hidden transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+        className={`md:hidden absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-2xl overflow-hidden transition-all duration-300 ease-in-out z-10 ${
+          isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="py-4 px-6 flex flex-col gap-4">

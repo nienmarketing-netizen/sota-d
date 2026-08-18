@@ -1,21 +1,81 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ShieldCheck, Microscope, Link as LinkIcon, Users, Star, Quote, ShoppingCart, ArrowUpRight, CheckCircle2, TrendingUp } from 'lucide-react';
 
 export function ShofuSocialProof() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [itemsPerView, setItemsPerView] = useState(1);
+
   const testimonials = [
+    {
+      name: 'Dr. Shukan Kanuga, DDS, MSD',
+      role: 'Chuyên khoa Nha nhi (ABPD), California, Mỹ',
+      topic: 'Nha khoa trẻ em & Hiệu quả vận hành phòng khám',
+      content: 'Dòng sản phẩm tự dán ứng dụng công nghệ S-PRG hoạt động như một phép màu giúp tăng tốc quy trình lâm sàng cho các bé nhỏ hiếu động nhờ loại bỏ 2 bước nhạy cảm kỹ thuật là etch và bond. Đây thực sự là một công cụ thu hút khách hàng tuyệt vời cho phòng khám khi các bậc cha mẹ luôn hạnh phúc chia sẻ câu chuyện thành công này với người thân của họ!',
+      avatar: 'https://ui-avatars.com/api/?name=SK&background=00ADEF&color=fff'
+    },
     {
       name: 'BS. Dương Bảo Ngọc',
       role: 'Chuyên gia Phục hồi Thẩm mỹ',
+      topic: 'Thẩm mỹ & Bảo vệ tối ưu',
       content: 'Chất lượng bề mặt và đặc tính quang học của Beautifil Injectable X thực sự khác biệt. Tính năng kháng khuẩn từ hạt S-PRG mang lại sự an tâm tuyệt đối khi tôi thực hiện các ca trám răng sau phức tạp.',
       avatar: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BS.Ngo%CC%A3c.png'
     },
     {
+      name: 'Dr. Jennifer Bell, DDS, FAGD, FICD',
+      role: 'Thành viên Viện Thẩm mỹ Nha khoa Quốc tế, Mỹ',
+      topic: 'Sự dịch chuyển sang Nha khoa trị liệu sinh học',
+      content: 'Nha khoa hiện đại đang dịch chuyển mạnh mẽ sang xu hướng lựa chọn các vật liệu sinh học có khả năng tự sửa chữa mô răng và duy trì lợi ích trị liệu lâu dài cho bệnh nhân sau khi kết thúc điều trị. Hệ thống Giomer đáp ứng trọn vẹn điều này nhờ cơ chế trung hòa axit, phóng thích và tái nạp ion liên tục, cùng khả năng kháng khuẩn vượt trội.',
+      avatar: 'https://ui-avatars.com/api/?name=JB&background=C43838&color=fff'
+    },
+    {
       name: 'ThS.BS Trần Quang Khánh',
       role: 'Trainer MiCD Global Network',
+      topic: 'Khóa kín viền ngà & Không ê buốt',
       content: 'Hệ thống Cement dán của Shofu không chỉ đơn thuần là kết dính. Việc khóa kín viền ngà và giải phóng Fluoride liên tục đã giải quyết hoàn toàn vấn đề ê buốt sau phục hình gián tiếp mà nhiều bác sĩ e ngại.',
       avatar: 'https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@03c66c4af6e28e2a69254e4d674c5a45ab53e988/BS%20Kha%CC%81nh.png'
+    },
+    {
+      name: 'Dr. Frank J. Milnar, DDS, AAACD',
+      role: 'Chuyên gia Thẩm mỹ Nha khoa (AACD), Mỹ',
+      topic: 'Thẩm mỹ tự nhiên – "Hòa sắc vô ảnh" không đắp lớp',
+      content: 'Khả năng khúc xạ, truyền truyền và khuếch tán ánh sáng tương đồng tự nhiên với cả men và ngà răng thật giúp miếng trám tệp màu hoàn hảo vào mô răng xung quanh. Nhờ hiệu ứng tắc kè hoa đỉnh cao này, Bác sĩ chỉ cần sử dụng kỹ thuật đơn giản vẫn đạt được kết quả thẩm mỹ tối ưu mà không cần đắp lớp layering phức tạp.',
+      avatar: 'https://ui-avatars.com/api/?name=FM&background=00ADEF&color=fff'
+    },
+    {
+      name: 'Professor Keiichi Hosaka',
+      role: 'Trưởng khoa Phục hồi tái tạo, Đại học Tokushima, Nhật Bản',
+      topic: 'Sức mạnh liên kết siêu mỏng & Khít sát vi thể',
+      content: 'Việc ứng dụng lớp keo dán siêu mỏng dưới 5 micron không chỉ tối ưu hóa khoảng xi măng ghép giúp phục hình gián tiếp đạt độ khít sát tuyệt đối, mà còn là chiếc cầu nối lý tưởng giúp các ion sinh học từ hạt độn S-PRG phía trên dễ dàng khuếch tán xuyên qua để bảo vệ mô răng sống bên dưới lớp lai.',
+      avatar: 'https://ui-avatars.com/api/?name=KH&background=C43838&color=fff'
+    },
+    {
+      name: 'Dr. Valeria V. Gordan, DDS, MS',
+      role: 'Giám đốc Nghiên cứu Lâm sàng Đại học Florida, Mỹ',
+      topic: 'Bảo chứng lâm sàng dài hạn và không sâu tái phát',
+      content: 'Qua nghiên cứu lâm sàng độc lập dài hạn, hệ thống dán dính và vật liệu sinh học Giomer chứng minh độ bền bỉ đáng kinh ngạc. Sau 8 năm theo dõi, chúng tôi ghi nhận tỷ lệ lưu giữ phục hình là 100%, hoàn toàn không có sâu răng thứ phát và không có nhạy cảm hậu phẫu. Thậm chí sau 13 năm, có tới 96% phục hình vẫn hoàn toàn sạch bóng sâu răng tái phát.',
+      avatar: 'https://ui-avatars.com/api/?name=VG&background=00ADEF&color=fff'
     }
   ];
+
+  useEffect(() => {
+    const handleResize = () => {
+      setItemsPerView(window.innerWidth >= 768 ? 2 : 1);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const maxIndex = Math.max(0, testimonials.length - itemsPerView);
+    if (activeIndex > maxIndex) {
+      setActiveIndex(maxIndex);
+    }
+    const interval = setInterval(() => {
+      setActiveIndex((current) => (current >= maxIndex ? 0 : current + 1));
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [itemsPerView, testimonials.length, activeIndex]);
 
   return (
     <section id="social-proof" className="py-24 relative border-b border-slate-200 bg-slate-50 bg-grid-pattern overflow-hidden">
@@ -195,27 +255,49 @@ export function ShofuSocialProof() {
         </div>
 
         {/* Testimonials Quotes */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {testimonials.map((test, index) => (
-            <div key={index} className="bg-white rounded-[20px] lg:rounded-3xl p-5 sm:p-6 lg:p-8 sm:p-10 relative shadow-sm border border-slate-200">
-              <Quote className="absolute top-8 right-8 w-10 h-10 lg:w-12 lg:h-12 text-slate-100" />
-              <div className="flex items-center gap-1 mb-4 lg:mb-6">
-                {[1, 2, 3, 4, 5].map(star => (
-                  <Star key={star} className="w-4 h-4 fill-[#00ADEF] text-[#00ADEF]" />
-                ))}
-              </div>
-              <p className="font-body text-slate-700 italic leading-relaxed mb-8 relative z-10">
-                "{test.content}"
-              </p>
-              <div className="flex items-center gap-4">
-                <img src={test.avatar} alt={test.name} className="w-10 h-10 lg:w-12 lg:h-12 rounded-full object-cover bg-white p-0.5 border border-slate-200" />
-                <div>
-                  <div className="font-heading font-bold text-slate-900">{test.name}</div>
-                  <div className="font-mono text-[10px] uppercase text-[#00ADEF]">{test.role}</div>
+        <div className="relative overflow-hidden bg-transparent">
+          <div 
+            className="flex transition-transform duration-700 ease-in-out" 
+            style={{ transform: `translateX(-${activeIndex * (100 / itemsPerView)}%)` }}
+          >
+            {testimonials.map((test, index) => (
+              <div key={index} className="w-full md:w-1/2 shrink-0 px-2 lg:px-4">
+                <div className="bg-white rounded-[20px] lg:rounded-3xl p-6 sm:p-8 lg:p-10 relative shadow-sm border border-slate-200 h-full flex flex-col max-w-4xl mx-auto">
+                  <Quote className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8 w-10 h-10 lg:w-12 lg:h-12 text-slate-100" />
+                  <div className="flex items-center gap-1 mb-4 lg:mb-6">
+                    {[1, 2, 3, 4, 5].map(star => (
+                      <Star key={star} className="w-4 h-4 fill-[#00ADEF] text-[#00ADEF]" />
+                    ))}
+                  </div>
+                  <div className="font-heading font-bold text-lg sm:text-xl text-slate-900 mb-4">{test.topic}</div>
+                  <p className="font-body text-slate-700 italic leading-relaxed mb-8 relative z-10 flex-grow">
+                    "{test.content}"
+                  </p>
+                  <div className="flex items-center gap-4 mt-auto">
+                    <img src={test.avatar} alt={test.name} className="w-12 h-12 lg:w-14 lg:h-14 rounded-full object-cover object-top bg-white p-0.5 border border-slate-200" />
+                    <div>
+                      <div className="font-heading font-bold text-slate-900">{test.name}</div>
+                      <div className="font-body text-xs text-slate-500 mt-0.5 max-w-md">{test.role}</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          
+          {/* Pagination Indicators */}
+          <div className="flex justify-center gap-2 mt-8">
+            {Array.from({ length: Math.max(0, testimonials.length - itemsPerView) + 1 }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === activeIndex ? 'w-6 bg-[#00ADEF]' : 'bg-slate-300 hover:bg-slate-400'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="mt-16 flex justify-center">

@@ -21,7 +21,7 @@ export function ShofuAbout() {
         {/* Brand History */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
           <div>
-            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-6">
+            <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-slate-900 mb-6 uppercase">
               Di Sản 100 Năm <br />
               Nha Khoa Nhật Bản
             </h2>
