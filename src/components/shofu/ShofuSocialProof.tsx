@@ -1,9 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import { ShieldCheck, Microscope, Link as LinkIcon, Users, Star, Quote, ShoppingCart, ArrowUpRight, CheckCircle2, TrendingUp } from 'lucide-react';
 
 export function ShofuSocialProof() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [itemsPerView, setItemsPerView] = useState(1);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' }, [Autoplay({ delay: 10000, stopOnInteraction: true })]);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on('select', onSelect);
+    emblaApi.on('reInit', onSelect);
+  }, [emblaApi, onSelect]);
 
   const testimonials = [
     {
@@ -56,26 +72,6 @@ export function ShofuSocialProof() {
       avatar: 'https://ui-avatars.com/api/?name=VG&background=00ADEF&color=fff'
     }
   ];
-
-  useEffect(() => {
-    const handleResize = () => {
-      setItemsPerView(window.innerWidth >= 768 ? 2 : 1);
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const maxIndex = Math.max(0, testimonials.length - itemsPerView);
-    if (activeIndex > maxIndex) {
-      setActiveIndex(maxIndex);
-    }
-    const interval = setInterval(() => {
-      setActiveIndex((current) => (current >= maxIndex ? 0 : current + 1));
-    }, 10000);
-    return () => clearInterval(interval);
-  }, [itemsPerView, testimonials.length, activeIndex]);
 
   return (
     <section id="social-proof" className="py-24 relative border-b border-slate-200 bg-slate-50 bg-grid-pattern overflow-hidden">
@@ -255,14 +251,11 @@ export function ShofuSocialProof() {
         </div>
 
         {/* Testimonials Quotes */}
-        <div className="relative overflow-hidden bg-transparent">
-          <div 
-            className="flex transition-transform duration-700 ease-in-out" 
-            style={{ transform: `translateX(-${activeIndex * (100 / itemsPerView)}%)` }}
-          >
+        <div className="relative overflow-hidden bg-transparent" ref={emblaRef}>
+          <div className="flex touch-pan-y">
             {testimonials.map((test, index) => (
               <div key={index} className="w-full md:w-1/2 shrink-0 px-2 lg:px-4">
-                <div className="bg-white rounded-[20px] lg:rounded-3xl p-6 sm:p-8 lg:p-10 relative shadow-sm border border-slate-200 h-full flex flex-col max-w-4xl mx-auto">
+                <div className="bg-white rounded-[20px] lg:rounded-3xl p-6 sm:p-8 lg:p-10 relative shadow-sm border border-slate-200 h-full flex flex-col max-w-4xl mx-auto cursor-grab active:cursor-grabbing">
                   <Quote className="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8 w-10 h-10 lg:w-12 lg:h-12 text-slate-100" />
                   <div className="flex items-center gap-1 mb-4 lg:mb-6">
                     {[1, 2, 3, 4, 5].map(star => (
@@ -287,12 +280,12 @@ export function ShofuSocialProof() {
           
           {/* Pagination Indicators */}
           <div className="flex justify-center gap-2 mt-8">
-            {Array.from({ length: Math.max(0, testimonials.length - itemsPerView) + 1 }).map((_, index) => (
+            {testimonials.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => scrollTo(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === activeIndex ? 'w-6 bg-[#00ADEF]' : 'bg-slate-300 hover:bg-slate-400'
+                  index === selectedIndex ? 'w-6 bg-[#00ADEF]' : 'bg-slate-300 hover:bg-slate-400'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
