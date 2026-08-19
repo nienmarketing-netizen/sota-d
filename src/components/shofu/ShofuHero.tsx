@@ -15,9 +15,13 @@ export function ShofuHero({ onCTA }: ShofuHeroProps) {
       {/* Main Image - Aligned with Content */}
       <div className="w-[90%] lg:w-[80%] mx-auto relative z-10 mb-10 md:mb-16 mix-blend-multiply opacity-90">
         <img
-          src="https://cdn.jsdelivr.net/gh/nienmarketing-netizen/sota-d@main/background-hero-section-full-solution-shofu.png"
+          src="/images/background-hero-section-full-solution-shofu.png"
           alt="Shofu Full Solution"
           className="w-full h-auto object-cover block mix-blend-multiply"
+          onError={(e) => {
+            // Hiển thị placeholder nếu ảnh chưa được tải lên
+            e.currentTarget.src = "https://placehold.co/1200x600/f8fafc/94a3b8?text=Đang+chờ+ảnh:+background-hero-section-full-solution-shofu.png";
+          }}
         />
       </div>
 
