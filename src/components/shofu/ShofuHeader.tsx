@@ -75,8 +75,8 @@ export function ShofuHeader({ onNavigate, onOpenQuote }: ShofuHeaderProps) {
 
       {/* Mobile Navigation Dropdown */}
       <div 
-        className={`md:hidden absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-2xl overflow-hidden transition-all duration-300 ease-in-out z-10 ${
-          isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+        className={`md:hidden absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-2xl transition-all duration-300 ease-in-out z-50 ${
+          isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
         }`}
       >
         <div className="py-4 px-6 flex flex-col gap-4">

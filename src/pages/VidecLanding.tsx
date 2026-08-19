@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Hero } from '../components/Hero';
 import { BenefitsSection } from '../components/BenefitsSection';
 import { ScheduleSection } from '../components/ScheduleSection';
@@ -9,6 +9,10 @@ import { Footer } from '../components/Footer';
 
 export default function VidecLanding() {
  const [isAiCopilotOpen, setIsAiCopilotOpen] = useState(false);
+
+ useEffect(() => {
+  document.title = "VIDEC 2026 | Gian hàng Sota-D / SHOFU (B75–B77)";
+ }, []);
 
  const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);

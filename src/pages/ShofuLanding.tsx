@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ShofuHeader } from '../components/shofu/ShofuHeader';
 import { ShofuHero } from '../components/shofu/ShofuHero';
 import { ShofuSolutions } from '../components/shofu/ShofuSolutions';
@@ -12,6 +12,10 @@ import { ContactModal } from '../components/ContactModal';
 export default function ShofuLanding() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalType, setModalType] = useState<'consult' | 'quote'>('consult');
+
+  useEffect(() => {
+    document.title = "Sota-D | Đối tác chính thức Shofu tại Việt Nam";
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
