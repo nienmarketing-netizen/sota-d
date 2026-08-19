@@ -64,7 +64,10 @@ export function ShofuHeader({ onNavigate, onOpenQuote }: ShofuHeaderProps) {
           {/* Mobile Menu Toggle */}
           <button 
             className="md:hidden p-2 text-slate-700 relative z-50"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={(e) => {
+              e.preventDefault();
+              setIsMobileMenuOpen((prev) => !prev);
+            }}
             aria-expanded={isMobileMenuOpen}
             aria-label="Toggle menu"
           >
@@ -74,12 +77,9 @@ export function ShofuHeader({ onNavigate, onOpenQuote }: ShofuHeaderProps) {
       </div>
 
       {/* Mobile Navigation Dropdown */}
-      <div 
-        className={`md:hidden absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-2xl transition-all duration-300 ease-in-out z-50 ${
-          isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
-        }`}
-      >
-        <div className="py-4 px-6 flex flex-col gap-4">
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed top-[68px] left-0 right-0 w-full bg-white border-t border-slate-100 shadow-2xl z-[100] animate-in slide-in-from-top-2 fade-in duration-200">
+          <div className="py-4 px-6 flex flex-col gap-4">
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -103,6 +103,7 @@ export function ShofuHeader({ onNavigate, onOpenQuote }: ShofuHeaderProps) {
           </button>
         </div>
       </div>
+      )}
     </header>
   );
 }
